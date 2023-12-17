@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <title>Dynamite</title>
+    </head>
+    <body style="direction: rtl;">
+        <div class="crud">
+            <div class="head">
+                <img src="imges/12 (1).png">
+                <p>منظومة أسماء الموظفين</p>
+            </div>
+            <span id="element"></span>
+            <div class="inputs">
+                <input placeholder="الأسم" type="text" id="names">
+                <div class="data">
+                    <input placeholder="الوظيفة" type="text" id="fun">
+                    <input placeholder="رقم الهاتف" type="number" id="phone">
+                    <input placeholder="المكان" type="text" id="place">
+                    <input placeholder="الأسعار" type="text" id="prices">
+                    <input placeholder="URL" type="url" id="url" style="direction: ltr;">
+                </div>
+                <button id="submit">اضافة</button>
+            </div>
+    
+    
+            <div class="outputs">
+                <div class="searchBlock">
+                    <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="بحث">
+                    <div class="btnSearch">
+                        <button onclick="getSearchMood(this.id)" id="searchName">بحث بالأسم</button>
+                        <button onclick="getSearchMood(this.id)" id="searchFunction">بحث بالوظيفة</button>
+                    </div>
+                </div>
+                <div id="deleteAll">
+                    
+                </div>
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>الأسم</th>
+                        <th>الوظيفة</th>
+                        <th>رقم الهاتف</th>
+                        <th>المكان</th>
+                        <th>الأسعار</th>
+                        <th>url</th>
+                        <th>تعديل</th>
+                        <th>حدف</th>
+                    </tr>
+    
+                    <tbody id="tbody">
+    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
